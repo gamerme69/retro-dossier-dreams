@@ -5,7 +5,7 @@ const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   
-  const fullText = "A tech enthusiast who loves to tinker, learn, and create — not an expert yet, just having fun figuring things out.";
+  const fullText = "Just a curious guy who enjoys exploring tech, learning new things, and building stuff for the fun of it.";
 
   useEffect(() => {
     if (isTyping) {
