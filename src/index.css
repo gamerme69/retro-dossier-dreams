@@ -104,31 +104,42 @@
     text-shadow: 
       0 0 5px currentColor,
       0 0 10px currentColor,
-      0 0 15px currentColor;
+      0 0 15px currentColor,
+      0 0 20px currentColor;
   }
 
   .cyber-border {
     border: 1px solid;
     border-image: linear-gradient(45deg, #ff0040, #8b00ff, #00ffff) 1;
   }
+
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 640px) {
+    .neon-text {
+      text-shadow: 
+        0 0 3px currentColor,
+        0 0 6px currentColor,
+        0 0 9px currentColor;
+    }
+  }
 }
 
 @layer components {
   .skill-tag {
-    @apply px-3 py-1 rounded-md text-sm font-medium transition-all duration-300;
+    @apply px-2 sm:px-3 py-1 rounded-md text-xs sm:text-sm font-medium transition-all duration-300;
     @apply bg-gradient-to-r from-cyber-red/20 to-cyber-purple/20;
     @apply border border-cyber-cyan/30 hover:border-cyber-cyan;
     @apply hover:shadow-lg hover:shadow-cyber-cyan/20;
   }
 
   .project-card {
-    @apply glass-morphism rounded-lg p-6 transition-all duration-300;
+    @apply glass-morphism rounded-lg p-4 sm:p-6 transition-all duration-300;
     @apply hover:transform hover:scale-105 hover:shadow-xl;
     @apply hover:shadow-cyber-red/20 border-cyber-purple/30;
   }
 
   .timeline-item {
-    @apply relative pl-8 pb-8 animate-fade-in;
+    @apply relative pl-6 sm:pl-8 pb-6 sm:pb-8 animate-fade-in;
   }
 
   .timeline-item::before {
