@@ -102,6 +102,7 @@
 
   .neon-text {
     text-shadow: 
+      0 0 2px rgba(0,0,0,1),
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
@@ -113,14 +114,22 @@
     border-image: linear-gradient(45deg, #ff0040, #8b00ff, #00ffff) 1;
   }
 
-  /* Enhanced mobile responsiveness */
+  /* Enhanced mobile responsiveness and improved text visibility */
   @media (max-width: 640px) {
     .neon-text {
       text-shadow: 
+        0 0 2px rgba(0,0,0,1),
         0 0 3px currentColor,
         0 0 6px currentColor,
         0 0 9px currentColor;
     }
+  }
+
+  /* Improved contrast for all glowing elements */
+  .skill-tag,
+  .project-card,
+  .timeline-item {
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
   }
 }
 
@@ -130,12 +139,15 @@
     @apply bg-gradient-to-r from-cyber-red/20 to-cyber-purple/20;
     @apply border border-cyber-cyan/30 hover:border-cyber-cyan;
     @apply hover:shadow-lg hover:shadow-cyber-cyan/20;
+    background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.4));
+    text-shadow: 0 0 2px rgba(0,0,0,1), 0 0 4px currentColor;
   }
 
   .project-card {
     @apply glass-morphism rounded-lg p-4 sm:p-6 transition-all duration-300;
     @apply hover:transform hover:scale-105 hover:shadow-xl;
     @apply hover:shadow-cyber-red/20 border-cyber-purple/30;
+    background: rgba(10,10,10,0.7);
   }
 
   .timeline-item {
